@@ -22,17 +22,37 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 3.2rem;
   color: var(--color-body);
+  line-height: 1.5;
 }
 
 h1,
 h2 {
   color: var(--color-headings);
+  font-weight: 900;
 }
 
 h1 {
   font-size: 9.6rem;
+  line-height: 12rem;
 }
 
 h2 {
   font-size: 4.8rem;
+}
+
+/* Container */
+.container {
+  width: 1720px;
+}
+
+/* Block Component */
+.block--primary {
+  background-color: var(--color-primary);
+}
+.block--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+}
+.block__heading {
+  margin-top: 0;
 }
