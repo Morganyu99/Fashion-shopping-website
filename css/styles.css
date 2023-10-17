@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Typography */
+
+:root {
+  --color-primary: #ebd69b;
+  --color-secondary: #000;
+  --color-accent: #fff;
+  --color-headings: #000;
+  --color-body: #191919;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.2rem;
+  color: var(--color-body);
+}
+
+h1,
+h2 {
+  color: var(--color-headings);
+}
+
+h1 {
+  font-size: 9.6rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
