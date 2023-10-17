@@ -71,3 +71,24 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Highlight-text */
+.highlight {
+  display: inline-block;
+  min-width: 47rem;
+  transform: rotate(-2deg);
+}
+.highlight__text {
+  margin: 0;
+  padding: 0.5rem 2rem;
+  transform: rotate(2deg);
+}
+.highlight--primary {
+  background-color: var(--color-primary);
+}
+.highlight--secondary {
+  background-color: var(--color-secondary);
+}
+.highlight--accent {
+  background-color: var(--color-accent);
+}
