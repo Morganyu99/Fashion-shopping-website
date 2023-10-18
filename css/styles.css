@@ -124,15 +124,31 @@ h2 {
   box-shadow: 0 0 20px 10px rgb(241, 241, 241);
 }
 
-/* Vector */
+/* Vector */ /* Star and ellipse */
 .vector {
   display: inline-block;
   width: 10rem;
   height: 3rem;
 }
-.vector--primary {
+.vector--primary,
+.star--primary,
+.ellipse--primary {
   fill: var(--color-primary);
 }
-.vector--secondary {
+.vector--secondary,
+.star--secondary,
+.ellipse--secondary {
   fill: var(--color-secondary);
+}
+.vector--accent,
+.star--accent,
+.ellipse--accent {
+  fill: var(--color-accent);
+}
+
+.star,
+.ellipse {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
 }
