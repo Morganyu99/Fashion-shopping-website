@@ -145,10 +145,32 @@ h2 {
 .ellipse--accent {
   fill: var(--color-accent);
 }
-
+.vector--grey,
+.star--grey,
+.ellipse--grey {
+  fill: #89807a;
+}
 .star,
 .ellipse {
   display: inline-block;
   width: 5rem;
   height: 5rem;
+}
+
+/* Icons */
+.icon {
+  display: inline-block;
+  height: 5.2rem;
+  width: 5.2rem;
+  border-radius: 1.5rem;
+  outline: 0;
+  background-color: var(--color-primary);
+  text-align: center;
+  cursor: pointer;
+}
+.icon svg {
+  height: 5.2rem;
+  width: 5.2rem;
+  vertical-align: middle;
+  justify-self: center;
 }
