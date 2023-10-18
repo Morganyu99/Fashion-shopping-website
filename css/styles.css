@@ -118,3 +118,21 @@ h2 {
 .btn--primary:hover {
   background-color: #ddc06f;
 }
+
+/* card */
+.card {
+  box-shadow: 0 0 20px 10px rgb(241, 241, 241);
+}
+
+/* Vector */
+.vector {
+  display: inline-block;
+  width: 10rem;
+  height: 3rem;
+}
+.vector--primary {
+  fill: var(--color-primary);
+}
+.vector--secondary {
+  fill: var(--color-secondary);
+}
