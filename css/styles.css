@@ -10,6 +10,7 @@ html {
 
 /* Typography */
 
+/* TODO: Color heading to be removed */
 :root {
   --color-primary: #ebd69b;
   --color-secondary: #000;
@@ -18,11 +19,13 @@ html {
   --color-body: #191919;
 }
 
-body {
+body,
+a {
   font-family: "Poppins", sans-serif;
   font-size: 3.2rem;
   color: var(--color-body);
   line-height: 1.5;
+  text-decoration: none;
 }
 
 h1,
@@ -91,4 +94,27 @@ h2 {
 }
 .highlight--accent {
   background-color: var(--color-accent);
+}
+
+/* Button */
+.btn {
+  outline: 0;
+  font-weight: 500;
+  border: 0;
+  border-radius: 10%;
+  cursor: pointer;
+  padding: 0 1rem;
+}
+.btn--primary {
+  background-color: var(--color-primary);
+}
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+}
+.btn--secondary:hover {
+  background-color: var(--color-body);
+}
+.btn--primary:hover {
+  background-color: #ddc06f;
 }
