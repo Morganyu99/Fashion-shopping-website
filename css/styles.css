@@ -22,7 +22,7 @@ html {
 body,
 a {
   font-family: "Poppins", sans-serif;
-  font-size: 3.2rem;
+
   color: var(--color-body);
   line-height: 1.5;
   text-decoration: none;
@@ -58,6 +58,10 @@ h2 {
 }
 .block__heading {
   margin-top: 0;
+}
+
+ul {
+  list-style: none;
 }
 
 /* Grid */
@@ -104,6 +108,7 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
   padding: 0.5rem 1rem;
+  font-size: 3.2rem;
 }
 .btn--primary {
   background-color: var(--color-primary);
@@ -214,4 +219,89 @@ h2 {
 .search-bar .btn {
   margin: 0.5rem 1rem;
   padding: 0.5rem 3rem;
+}
+
+/* NavBar */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.nav__logo-image {
+  height: 20px;
+  width: 25px;
+}
+.nav__logo-name {
+  font-weight: 900;
+  font-size: 3rem;
+  padding-left: 0.5rem;
+}
+.nav__logo,
+.nav__menu {
+  cursor: pointer;
+}
+.nav__menu {
+  width: 35px;
+  height: 42px;
+}
+.nav__list {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  transition: max-height 0.4s, opacity 0.4s;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.nav__item {
+  margin-bottom: 1rem;
+}
+.nav__item > a:hover {
+  color: #7f7f7f;
+}
+
+.collapse-content {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+.nav.expandable .nav__list {
+  transition: all 0.4s;
+  max-height: 100vh;
+  opacity: 1;
+}
+
+.nav .btn {
+  font-weight: 400;
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
+}
+
+.nav .btn:hover {
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__menu {
+    display: none;
+  }
+  .nav__list {
+    max-height: 100vh;
+    opacity: 1;
+    display: flex;
+    width: 80%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav__item {
+    margin: 0.5rem 2%;
+    font-size: 1.5rem;
+  }
+  .nav .btn {
+    font-size: 1.5rem;
+  }
 }
