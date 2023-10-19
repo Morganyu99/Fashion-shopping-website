@@ -22,10 +22,12 @@ html {
 body,
 a {
   font-family: "Poppins", sans-serif;
-
   color: var(--color-body);
   line-height: 1.5;
   text-decoration: none;
+}
+body {
+  width: 100%;
 }
 
 h1,
@@ -37,6 +39,7 @@ h2 {
 h1 {
   font-size: 9.6rem;
   line-height: 12rem;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -45,9 +48,15 @@ h2 {
 
 /* Container */
 .container {
-  width: 1720px;
+  width: 90%;
+  margin: auto;
 }
 
+@media screen and (min-width: 1240px) {
+  .container {
+    max-width: 1720px;
+  }
+}
 /* Block Component */
 .block--primary {
   background-color: var(--color-primary);
@@ -86,6 +95,7 @@ ul {
   transform: rotate(-2deg);
 }
 .highlight__text {
+  display: inline-block;
   margin: 0;
   padding: 0.5rem 2rem;
   transform: rotate(2deg);
@@ -304,4 +314,21 @@ ul {
   .nav .btn {
     font-size: 1.5rem;
   }
+}
+
+/* Hero */
+.hero {
+  background-color: #dfdfdf;
+  border-radius: 10px;
+}
+
+.hero__picture {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.hero__picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
