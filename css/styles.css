@@ -25,6 +25,7 @@ a {
   color: var(--color-body);
   line-height: 1.5;
   text-decoration: none;
+  font-size: 2.4rem;
 }
 body {
   width: 100%;
@@ -408,4 +409,53 @@ ul {
 .showcase .card:hover {
   transition: all 0.3s;
   transform: scale(1.1);
+}
+
+/* Voucher-component */
+.voucher {
+  text-align: center;
+  align-items: center;
+  justify-items: end;
+  gap: 2rem;
+}
+.voucher__heading {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.voucher__body {
+  font-size: 2.4rem;
+}
+.voucher__applink {
+  margin: 4rem 0;
+}
+.voucher__image {
+  width: 100%;
+}
+.voucher__picture {
+  order: -1;
+}
+
+@media screen and (min-width: 768px) {
+  .voucher {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+  }
+
+  .voucher__heading {
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+  .voucher__body {
+    font-size: 1.4rem;
+  }
+  .voucher__applink {
+    margin: 2rem 0;
+  }
+  .voucher__applink-item img {
+    width: 13rem;
+  }
+  .voucher__picture {
+    order: 0;
+  }
 }
