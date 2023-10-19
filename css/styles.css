@@ -332,3 +332,44 @@ ul {
   width: 100%;
   object-fit: cover;
 }
+/* Brands */
+
+.brands {
+  padding: 0 2rem;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brands div {
+  margin: 0 2rem;
+}
+.sprite {
+  background: url("../images/sprite.png") no-repeat top left;
+  width: 96px;
+  height: 96px;
+}
+.sprite.amazon1 {
+  background-position: 0 0;
+}
+.sprite.hm1 {
+  background-position: -106px 0;
+}
+.sprite.levi1 {
+  background-position: -212px 0;
+  width: 128px;
+  height: 128px;
+}
+.sprite.obey {
+  background-position: -350px 0;
+  width: 128px;
+  height: 128px;
+}
+.sprite.pngwingcom {
+  background-position: -488px 0;
+  width: 200px;
+  height: 31px;
+}
+.sprite.shopify1 {
+  background-position: -698px 0;
+}
