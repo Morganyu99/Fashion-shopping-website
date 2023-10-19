@@ -137,6 +137,7 @@ ul {
 /* card */
 .card {
   box-shadow: 0 0 20px 10px rgb(241, 241, 241);
+  border-radius: 10px;
 }
 
 /* Vector */ /* Star and ellipse */
@@ -196,13 +197,15 @@ ul {
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
+  margin: 1rem;
 }
 .link__header {
+  font-size: 1.5rem;
   margin: 0;
 }
 .link__content {
   color: #7f7f7f;
-  font-size: 2.4rem;
+
   margin-top: 0;
 }
 
@@ -372,4 +375,37 @@ ul {
 }
 .sprite.shopify1 {
   background-position: -698px 0;
+}
+
+/* Showcase */
+
+.showcase .grid {
+  gap: 3rem;
+}
+.showcase .block__heading {
+  display: inline-block;
+  position: relative;
+}
+.showcase .block__header,
+.showcase .block__heading {
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+}
+.showcase__icon {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  right: 0;
+  width: 15rem;
+}
+
+.showcase__image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.showcase .card:hover {
+  transition: all 0.3s;
+  transform: scale(1.1);
 }
