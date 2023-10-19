@@ -12,7 +12,7 @@ html {
 
 /* TODO: Color heading to be removed */
 :root {
-  --color-primary: #ebd69b;
+  --color-primary: #f8d26a;
   --color-secondary: #000;
   --color-accent: #fff;
   --color-headings: #000;
@@ -68,6 +68,9 @@ h2 {
 }
 .block__heading {
   margin-top: 0;
+}
+.block--center {
+  text-align: center;
 }
 
 ul {
@@ -212,16 +215,19 @@ ul {
 
 /* Search-Bar */
 .search-bar {
+  background-color: var(--color-accent);
   outline: 0;
+  width: 90%;
+  margin: auto;
+
   max-width: 600px;
-  box-shadow: 0 0 20px 10px #d8d6d5;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
 }
 
 .search-bar__input {
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   border: 0;
   margin: 2rem 0;
   padding-left: 1rem;
@@ -233,6 +239,7 @@ ul {
 .search-bar .btn {
   margin: 0.5rem 1rem;
   padding: 0.5rem 3rem;
+  font-size: 1.5rem;
 }
 
 /* NavBar */
@@ -458,4 +465,27 @@ ul {
   .voucher__picture {
     order: 0;
   }
+}
+
+/* Banner */
+
+.banner .block__heading {
+  font-size: 3rem;
+  text-transform: uppercase;
+
+  margin: auto;
+}
+.banner p {
+  font-size: 2rem;
+  opacity: 0.9;
+}
+.banner .block__body {
+  margin-bottom: 2rem;
+}
+.banner .block__header {
+  width: 90%;
+  margin: auto;
+}
+.banner {
+  padding-bottom: 2rem;
 }
