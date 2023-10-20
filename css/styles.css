@@ -98,7 +98,8 @@ ul {
 /* Highlight-text */
 .highlight {
   display: inline-block;
-  min-width: 47rem;
+  position: relative;
+  left: -2rem;
   transform: rotate(-2deg);
 }
 .highlight__text {
@@ -106,6 +107,7 @@ ul {
   margin: 0;
   padding: 0.5rem 2rem;
   transform: rotate(2deg);
+  text-transform: uppercase;
 }
 .highlight--primary {
   background-color: var(--color-primary);
@@ -139,6 +141,9 @@ ul {
 }
 .btn--primary:hover {
   background-color: #ddc06f;
+}
+.btn--padding {
+  padding: 1rem 2rem;
 }
 
 /* card */
@@ -551,4 +556,60 @@ ul {
   .footer li > a {
     font-size: 1.3rem;
   }
+}
+
+/* Sale */
+.sale {
+  align-items: center;
+  gap: 3rem;
+  background: linear-gradient(
+    1deg,
+    #e0c340 0.13%,
+    #dfc23e 3.97%,
+    #e1c441 7.2%,
+    #e3c743 10.13%,
+    #e4c542 12.98%,
+    #e6c744 15.99%,
+    #e7c845 19.52%,
+    #e5c643 23.96%,
+    #e6c945 30.43%,
+    #e3c743 36.49%,
+    #e9ca48 42.49%,
+    #edce49 49.35%,
+    #f0d44c 55.42%,
+    #f4d84f 61.43%,
+    #f6da52 65.74%,
+    #f7db53 72.23%,
+    #f9dd55 77.43%,
+    #f9df56 83.84%,
+    #fae157 91.52%,
+    #f9df56 97.87%
+  );
+}
+.sale__image {
+  width: 100%;
+  height: 100%;
+}
+.sale__heading {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.sale__text {
+  font-size: 2rem;
+  margin: 1rem 0;
+  margin-bottom: 2rem;
+}
+.sale__text--bold {
+  font-weight: 700;
+}
+.sale .block__body p {
+  margin: 0;
+}
+.sale .block__body {
+  margin: 2rem 0;
+}
+.sale .block {
+  width: 90%;
+  margin: auto;
 }
