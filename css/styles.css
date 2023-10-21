@@ -51,6 +51,12 @@ h2 {
   display: block;
 }
 
+div,
+h2,
+h1 {
+  cursor: default;
+}
+
 /* Container */
 .container {
   width: 90%;
@@ -204,15 +210,24 @@ ul {
   align-items: center;
   font-weight: 500;
   margin: 1rem;
+  cursor: pointer;
 }
 .link__header {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0;
 }
 .link__content {
   color: #7f7f7f;
-
+  font-size: 1.5rem;
   margin-top: 0;
+}
+@media screen and (min-width: 768px) {
+  .link__header {
+    font-size: 1.7rem;
+  }
+  .link__content {
+    font-size: 1.3rem;
+  }
 }
 
 /* Search-Bar */
@@ -473,6 +488,9 @@ ul {
 
 /* Showcase */
 
+.showcase {
+  margin-top: 3rem;
+}
 .showcase .grid {
   gap: 3rem;
 }
