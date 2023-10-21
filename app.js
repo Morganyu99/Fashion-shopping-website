@@ -14,8 +14,8 @@ let currentScroll = nav.offsetHeight;
 window.addEventListener("scroll", () => {
   // NavBar
   if (window.scrollY > nav.offsetHeight) {
-    if (currentScroll <= scrollY) {
-      currentScroll = scrollY;
+    if (currentScroll <= window.scrollY) {
+      currentScroll = window.scrollY;
       nav.classList.remove("sticky");
       nav_bar.classList.remove("expandable");
     } else {
@@ -26,5 +26,19 @@ window.addEventListener("scroll", () => {
   } else {
     nav.classList.remove("sticky");
     nav_bar.classList.remove("expandable");
+  }
+
+  //Highlight
+  const windowHeight = window.innerHeight;
+  const highlight = document.querySelectorAll(".highlight");
+  for (let i = 0; i < highlight.length; i++) {
+    if (
+      windowHeight - highlight[i].getBoundingClientRect().y >
+      0.5 * windowHeight
+    ) {
+      highlight[i].classList.add("highlight--aftanimate");
+    } else {
+      highlight[i].classList.remove("highlight--aftanimate");
+    }
   }
 });
