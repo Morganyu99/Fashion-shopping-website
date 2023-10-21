@@ -523,6 +523,9 @@ ul {
 }
 
 /* Voucher-component */
+.voucher__container {
+  margin-top: 4rem;
+}
 .voucher {
   text-align: center;
   align-items: center;
