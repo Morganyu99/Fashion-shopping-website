@@ -14,14 +14,16 @@ let currentScroll = nav.offsetHeight;
 window.addEventListener("scroll", () => {
   // NavBar
   if (window.scrollY > nav.offsetHeight) {
-    if (currentScroll <= window.scrollY) {
+    if (currentScroll < window.scrollY) {
       currentScroll = window.scrollY;
       nav.classList.remove("sticky");
-      nav_bar.classList.remove("expandable");
+      // nav_bar.classList.remove("expandable");
+    } else if (window.scrollY == nav.offsetHeight) {
+      currentScroll = window.scrollY;
     } else {
       nav.classList.add("sticky");
       currentScroll = window.scrollY;
-      nav_bar.classList.remove("expandable");
+      // nav_bar.classList.remove("expandable");
     }
   } else {
     nav.classList.remove("sticky");
@@ -39,6 +41,43 @@ window.addEventListener("scroll", () => {
       highlight[i].classList.add("highlight--aftanimate");
     } else {
       highlight[i].classList.remove("highlight--aftanimate");
+    }
+  }
+
+  //fade-up
+  const fadeUp = document.querySelectorAll(".fade-up");
+  for (let i = 0; i < fadeUp.length; i++) {
+    if (
+      windowHeight - fadeUp[i].getBoundingClientRect().y >
+      0.15 * windowHeight
+    ) {
+      fadeUp[i].classList.add("fade-up--after");
+    } else {
+      fadeUp[i].classList.remove("fade-up--after");
+    }
+  }
+  //fade-right
+  const fadeRight = document.querySelectorAll(".fade-right");
+  for (let i = 0; i < fadeRight.length; i++) {
+    if (
+      windowHeight - fadeRight[i].getBoundingClientRect().y >
+      0.15 * windowHeight
+    ) {
+      fadeRight[i].classList.add("fade-right--after");
+    } else {
+      fadeRight[i].classList.remove("fade-right--after");
+    }
+  }
+  //fade-left
+  const fadeLeft = document.querySelectorAll(".fade-left");
+  for (let i = 0; i < fadeLeft.length; i++) {
+    if (
+      windowHeight - fadeLeft[i].getBoundingClientRect().y >
+      0.15 * windowHeight
+    ) {
+      fadeLeft[i].classList.add("fade-left--after");
+    } else {
+      fadeLeft[i].classList.remove("fade-left--after");
     }
   }
 });
