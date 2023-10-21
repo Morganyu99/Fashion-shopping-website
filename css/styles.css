@@ -650,6 +650,7 @@ ul {
 
 /* Sale */
 .sale {
+  margin-top: 6rem;
   align-items: center;
   gap: 3rem;
   background: linear-gradient(
