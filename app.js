@@ -5,11 +5,14 @@ document.querySelectorAll(".collapse").forEach((item) => {
   });
 });
 
-// NavBar Animation
+// NavBar
 const nav = document.querySelectorAll(".nav__container")[0];
 const nav_bar = document.querySelectorAll(".collapse")[0];
 let currentScroll = nav.offsetHeight;
+
+//Scroll Dependent
 window.addEventListener("scroll", () => {
+  // NavBar
   if (window.scrollY > nav.offsetHeight) {
     if (currentScroll <= scrollY) {
       currentScroll = scrollY;
