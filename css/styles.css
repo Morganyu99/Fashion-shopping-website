@@ -301,7 +301,7 @@ ul {
 
 .collapse-content {
   transition: max-height 0.4s, opacity 0.4s;
-  overflow: hidden;
+
   max-height: 0;
   opacity: 0;
   margin: 0;
@@ -426,17 +426,37 @@ ul {
 }
 /* Brands */
 .brands {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.brands-1,
+.brands-2 {
+  position: relative;
   padding: 0 2rem;
   background-color: var(--color-primary);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 1024px;
+  justify-content: space-between;
   align-items: center;
+  white-space: no-wrap;
+}
+.brands-1 {
+  animation: brand1-animation 20s linear 0s infinite;
+}
+.brands-2 {
+  animation: brand2-animation 20s linear 10s infinite;
 }
 
-.brands div {
-  margin: 0 2rem;
+.brands-1 a,
+.brands-2 a {
+  margin-left: 4rem;
 }
+/* .brands div {
+  margin: 0 2rem;
+} */
 .sprite {
   background: url("../images/sprite.png") no-repeat top left;
   width: 96px;
@@ -457,7 +477,7 @@ ul {
 .sprite.obey {
   background-position: -350px 0;
   width: 128px;
-  /* height: 128px; */
+  height: 128px;
 }
 .sprite.pngwingcom {
   background-position: -488px 0;
@@ -469,17 +489,49 @@ ul {
 }
 @media screen and (min-width: 1024px) {
   .brands {
+    width: 100%;
+  }
+  .brands-1 {
     padding: 0 2rem;
     background-color: var(--color-primary);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    animation: none;
   }
   .sprite {
     background: url("../images/sprite.png") no-repeat top left;
     width: 96px;
     height: 96px;
+  }
+  .brands-2 {
+    display: none;
+  }
+  .brands-1 a,
+  .brands-2 a {
+    margin-left: auto;
+  }
+}
+@keyframes brand1-animation {
+  0% {
+    right: -100vw;
+  }
+  50% {
+    right: calc(1024px - 100vw);
+  }
+
+  100% {
+    right: calc(2048px - 100vw);
+  }
+}
+@keyframes brand2-animation {
+  0% {
+    right: calc(1024px - 100vw);
+  }
+  50% {
+    right: calc(2048px - 100vw);
+  }
+
+  100% {
+    right: calc(3072px - 100vw);
   }
 }
 

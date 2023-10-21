@@ -9,6 +9,7 @@ document.querySelectorAll(".collapse").forEach((item) => {
 const nav = document.querySelectorAll(".nav__container")[0];
 const nav_bar = document.querySelectorAll(".collapse")[0];
 let currentScroll = nav.offsetHeight;
+const windowHeight = window.innerHeight;
 
 //Scroll Dependent
 window.addEventListener("scroll", () => {
@@ -31,7 +32,7 @@ window.addEventListener("scroll", () => {
   }
 
   //Highlight
-  const windowHeight = window.innerHeight;
+
   const highlight = document.querySelectorAll(".highlight");
   for (let i = 0; i < highlight.length; i++) {
     if (
