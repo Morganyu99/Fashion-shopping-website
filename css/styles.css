@@ -594,7 +594,8 @@ ul {
   margin: auto;
 }
 .banner {
-  padding-bottom: 2rem;
+  padding: 5rem 0;
+  margin-top: 4rem;
 }
 
 /* footer */
@@ -608,7 +609,7 @@ ul {
   align-items: center;
 }
 .footer {
-  padding: 3rem 0;
+  padding: 6rem 0;
 }
 .footer li > a {
   color: #7f7f7f;
