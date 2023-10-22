@@ -271,7 +271,7 @@ ul {
   font-size: 1.5rem;
   border: 0;
   margin: 2rem 0;
-  padding-left: 1rem;
+  padding-left: 2rem;
   outline: 0;
   min-width: 0;
   opacity: 0.6;
@@ -664,6 +664,7 @@ ul {
 .banner p {
   font-size: 2rem;
   opacity: 0.9;
+  cursor: default;
 }
 .banner .block__body {
   margin-bottom: 2rem;
