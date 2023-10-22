@@ -451,7 +451,7 @@ ul {
   width: 1024px;
   justify-content: space-between;
   align-items: center;
-  white-space: no-wrap;
+  white-space: nowrap;
 }
 .brands-1 {
   animation: brand1-animation 20s linear 0s infinite;
