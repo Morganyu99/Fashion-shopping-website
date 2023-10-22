@@ -42,7 +42,7 @@ window.addEventListener("scroll", () => {
   for (let i = 2; i < highlight.length; i++) {
     if (
       windowHeight - highlight[i].getBoundingClientRect().y >
-      0.35 * windowHeight
+      0.25 * windowHeight
     ) {
       highlight[i].classList.add("highlight--aftanimate");
     } else {

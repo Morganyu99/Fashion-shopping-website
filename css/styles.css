@@ -51,6 +51,19 @@ h2 {
   display: block;
 }
 
+@media screen and (min-width: 1024px){
+  h1{
+    font-size: 8rem;
+    line-height: 12rem;
+  }
+  h2{
+    font-size: 6rem;
+  }
+  p{
+    font-size: 3rem;
+  }
+}
+
 div,
 h2,
 h1 {
@@ -202,6 +215,10 @@ ul {
 }
 .icon a {
   font-size: 2rem;
+}
+.icon--plain{
+  background-color: transparent;
+  
 }
 @media screen and (min-width: 768px) {
   .icon {
@@ -620,10 +637,10 @@ ul {
 
   .voucher__heading {
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
   .voucher__body {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
   .voucher__applink {
     margin: 2rem 0;
@@ -683,6 +700,21 @@ ul {
   cursor: pointer;
   overflow: hidden;
 }
+.footer__tile{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon--collapsible{
+  transform: rotate(-90deg);
+  transition: all 0.4s;
+  outline: 0;
+  cursor: pointer;
+}
+.expandable .icon--collapsible{
+  transform: rotate(0);
+  transition: all 0.4s;
+}
 
 @media screen and (min-width: 768px) {
   .footer .collapse-content {
@@ -691,11 +723,11 @@ ul {
     overflow: hidden;
   }
   .footer p {
-    font-size: 1.4rem;
+    font-size: 2rem;
     color: #d1d1d1;
   }
   .footer__grid {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 0.5fr 1fr;
   }
 
   .footer ul {
@@ -709,10 +741,17 @@ ul {
     padding-bottom: 1rem;
   }
   .footer .block__heading {
-    font-size: 2rem;
+    font-size: 4rem;
   }
   .footer li > a {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
+  }
+  .icon--collapsible{
+    display: none;
+  }
+  .footer__content-grid{
+    justify-items: end;
+    gap: 2rem;
   }
 }
 
@@ -747,7 +786,7 @@ ul {
 }
 .sale__image {
   width: 100%;
-  height: 100%;
+  
 }
 .sale__heading {
   margin-top: 0;
@@ -772,6 +811,17 @@ ul {
   width: 90%;
   margin: auto;
   padding: 2rem 0;
+}
+@media screen and (min-width: 1440px){
+  .sale__image{ 
+    width: 80%;}
+  .sale__header{
+    font-size: 9rem;
+  }
+  .sale__text {
+    font-size: 3rem;
+    
+  }
 }
 
 /* Animation */
