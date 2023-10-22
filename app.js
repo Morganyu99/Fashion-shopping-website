@@ -11,6 +11,12 @@ const nav_bar = document.querySelectorAll(".collapse")[0];
 let currentScroll = nav.offsetHeight;
 const windowHeight = window.innerHeight;
 
+//Hero;
+const highlight = document.querySelectorAll(".highlight");
+const fadeUp = document.querySelectorAll(".fade-up");
+highlight[0].classList.add("highlight--aftanimate");
+highlight[1].classList.add("highlight--aftanimate");
+fadeUp[0].classList.add("fade-up--after");
 //Scroll Dependent
 window.addEventListener("scroll", () => {
   // NavBar
@@ -18,13 +24,13 @@ window.addEventListener("scroll", () => {
     if (currentScroll < window.scrollY) {
       currentScroll = window.scrollY;
       nav.classList.remove("sticky");
-      // nav_bar.classList.remove("expandable");
+      nav_bar.classList.remove("expandable");
     } else if (window.scrollY == nav.offsetHeight) {
       currentScroll = window.scrollY;
     } else {
       nav.classList.add("sticky");
       currentScroll = window.scrollY;
-      // nav_bar.classList.remove("expandable");
+      nav_bar.classList.remove("expandable");
     }
   } else {
     nav.classList.remove("sticky");
@@ -33,11 +39,10 @@ window.addEventListener("scroll", () => {
 
   //Highlight
 
-  const highlight = document.querySelectorAll(".highlight");
-  for (let i = 0; i < highlight.length; i++) {
+  for (let i = 2; i < highlight.length; i++) {
     if (
       windowHeight - highlight[i].getBoundingClientRect().y >
-      0.5 * windowHeight
+      0.35 * windowHeight
     ) {
       highlight[i].classList.add("highlight--aftanimate");
     } else {
@@ -46,15 +51,26 @@ window.addEventListener("scroll", () => {
   }
 
   //fade-up
-  const fadeUp = document.querySelectorAll(".fade-up");
-  for (let i = 0; i < fadeUp.length; i++) {
-    if (
-      windowHeight - fadeUp[i].getBoundingClientRect().y >
-      0.15 * windowHeight
-    ) {
-      fadeUp[i].classList.add("fade-up--after");
+
+  for (let i = 1; i < fadeUp.length; i++) {
+    if (window.innerWidth <= 1700) {
+      if (
+        windowHeight - fadeUp[i].getBoundingClientRect().y >
+        0.25 * windowHeight
+      ) {
+        fadeUp[i].classList.add("fade-up--after");
+      } else {
+        fadeUp[i].classList.remove("fade-up--after");
+      }
     } else {
-      fadeUp[i].classList.remove("fade-up--after");
+      if (
+        windowHeight - fadeUp[i].getBoundingClientRect().y >
+        0.01 * windowHeight
+      ) {
+        fadeUp[i].classList.add("fade-up--after");
+      } else {
+        fadeUp[i].classList.remove("fade-up--after");
+      }
     }
   }
   //fade-right

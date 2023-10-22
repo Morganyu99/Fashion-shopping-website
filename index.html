@@ -116,11 +116,15 @@
           </div>
         </article>
         <picture class="hero__picture fade-up">
-          <!-- <source
-            type="image/jpg"
-            srcset="./images/Hero_1ximg.png 1x, ./images/Hero_1ximg.png 2x"
+          <source
+            type="image/webp"
+            srcset="./images/hero@1x.webp 1x, ./images/hero@2x.webp 2x"
           />
-          <img src="./images/Hero_1ximg.png" /> -->
+          <source
+            type="image/png"
+            srcset="./images/hero@1x.png 1x, ./images/hero@2x.png 2x"
+          />
+          <img src="./images/hero@1xi.png" />
         </picture>
       </div>
     </div>
@@ -133,8 +137,6 @@
         <a class="sprite levi1" href="#"></a>
         <a class="sprite amazon1" href="#"></a>
       </div>
-      <!-- </div>
-    <div class="brands brands1"> -->
       <div class="brands-2">
         <a class="sprite hm1" href="#"></a>
         <a class="sprite obey" href="#"></a>
@@ -164,7 +166,9 @@
       <div class="block__body grid grid--1x3 fade-up">
         <a class="card" href="#">
           <picture class="card__header">
-            <img src="./images/Rectangle 20 (2).jpg" class="showcase__image" />
+            <source type="image/webp" srcset="./images/Rectangle20.webp" />
+            <source type="image/jpg" srcset="./images/Rectangle20.jpg" />
+            <img src="./images/Rectangle20.jpg" class="showcase__image" />
           </picture>
           <div class="card__body">
             <div class="link">
@@ -191,7 +195,9 @@
         </a>
         <a class="card" href="#">
           <picture class="card__header">
-            <img class="showcase__image" src="./images/Rectangle 21.jpg" />
+            <source type="image/webp" srcset="./images/Rectangle21.webp" />
+            <source type="image/jpg" srcset="./images/Rectangle21.jpg" />
+            <img class="showcase__image" src="./images/Rectangle21.jpg" />
           </picture>
           <div class="card__body">
             <div href="#" class="link">
@@ -218,7 +224,9 @@
         </a>
         <a class="card" href="#">
           <picture class="card__header">
-            <img class="showcase__image" src="./images/Rectangle 22.jpg" />
+            <source type="image/webp" srcset="./images/Rectangle22.webp" />
+            <source type="image/jpg" srcset="./images/Rectangle22.jpg" />
+            <img class="showcase__image" src="./images/Rectangle22.jpg" />
           </picture>
           <div class="card__body">
             <div href="#" class="link">
@@ -247,7 +255,15 @@
     </section>
     <section class="sale grid grid--1x2 block--primary">
       <picture class="fade-container">
-        <img src="./images/image 12.jpg" class="sale__image fade-right" />
+        <source
+          type="image/webp"
+          srcset="./images/Sale@1x.webp 1x, ./images/Sale@2x.webp 2x"
+        />
+        <source
+          type="image/jpeg"
+          srcset="./images/Sale@1x.jpeg 1x, ./images/Sale@2x.jpeg 2x"
+        />
+        <img src="./images/Sale@1x.jpeg" class="sale__image fade-right" />
       </picture>
       <section class="block fade-up">
         <header class="block__header">
@@ -293,10 +309,20 @@
         <a class="card" href="#">
           <picture class="card__header">
             <source
-              type="image/png"
-              srcset="./images/Rectangle 49.png 1x,./images/Rectangle 49@2x.png 2x"
+              type="image/webp"
+              srcset="
+                ./images/Rectangle49.webp    1x,
+                ./images/Rectangle49@2x.webp 2x
+              "
             />
-            <img src="./images/Rectangle 49.png" class="showcase__image" />
+            <source
+              type="image/jpeg"
+              srcset="
+                ./images/Rectangle49.jpeg    1x,
+                ./images/Rectangle49@2x.jpeg 2x
+              "
+            />
+            <img src="./images/Rectangle49.jpeg" class="showcase__image" />
           </picture>
           <div class="card__body">
             <div class="link">
@@ -324,13 +350,20 @@
         <a class="card" href="#">
           <picture class="card__header">
             <source
-              type="image/png"
+              type="image/webp"
               srcset="
-                ./images/Rectangle 50.png 1x,
-                ./images/Rectangle 50@2x.png 2x
+                ./images/Rectangle50.webp    1x,
+                ./images/Rectangle50@2x.webp 2x
               "
             />
-            <img class="showcase__image" src="./images/Rectangle 50.png" />
+            <source
+              type="image/jpeg"
+              srcset="
+                ./images/Rectangle50.jpeg    1x,
+                ./images/Rectangle50@2x.jpeg 2x
+              "
+            />
+            <img class="showcase__image" src="./images/Rectangle50.jpeg" />
           </picture>
           <div class="card__body">
             <div href="#" class="link">
@@ -367,14 +400,30 @@
           </p>
           <div class="voucher__applink">
             <a href="#" class="voucher__applink-item"
-              ><img src="./images/Rectangle 55 (1).jpg"
-            /></a>
+              ><picture>
+                <source
+                  type="image/webp"
+                  srcset="./images/Rectangle55(1).webp"
+                />
+                <source type="image/jpg" srcset="./images/Rectangle55(1).jpg" />
+                <img src="./images/Rectangle55(1).jpg" /> </picture
+            ></a>
             <a href="#" class="voucher__applink-item"
-              ><img src="./images/Rectangle 18 (1).jpg"
-            /></a>
+              ><picture>
+                <source
+                  type="image/webp"
+                  srcset="./images/Rectangle18(1).webp"
+                />
+                <source type="image/jpg" srcset="./images/Rectangle18(1).jpg" />
+                <img src="./images/Rectangle18(1).jpg" /> </picture
+            ></a>
           </div>
         </div>
         <picture class="voucher__picture fade-container">
+          <source
+            type="image/webp"
+            srcset="./images/Mobile_1x.webp 1x, ./images/Mobile_2x.webp 2x"
+          />
           <source
             type="image/jpg"
             srcset="./images/Mobile_1x.jpg 1x, ./images/Mobile_2x.jpg 2x"
