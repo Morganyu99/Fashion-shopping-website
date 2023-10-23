@@ -53,10 +53,10 @@ window.addEventListener("scroll", () => {
   //fade-up
 
   for (let i = 1; i < fadeUp.length; i++) {
-    if (window.innerWidth <= 1700) {
+    if (window.innerWidth <= 1700 && innerHeight<1600) {
       if (
-        windowHeight - fadeUp[i].getBoundingClientRect().y >
-        0.25 * windowHeight
+        0.75 * windowHeight - fadeUp[i].getBoundingClientRect().y >
+        0.15 * windowHeight
       ) {
         fadeUp[i].classList.add("fade-up--after");
       } else {
@@ -64,8 +64,8 @@ window.addEventListener("scroll", () => {
       }
     } else {
       if (
-        windowHeight - fadeUp[i].getBoundingClientRect().y >
-        0.1 * windowHeight
+        0.75 * windowHeight - fadeUp[i].getBoundingClientRect().y >
+        0.01 * windowHeight
       ) {
         fadeUp[i].classList.add("fade-up--after");
       } else {

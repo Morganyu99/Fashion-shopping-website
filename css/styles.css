@@ -853,7 +853,7 @@ ul {
 
 .fade-up {
   position: relative;
-  bottom: -5vh;
+  bottom: -25vh;
   opacity: 0;
   transition: bottom 1s, opacity 1s;
   overflow: hidden;
