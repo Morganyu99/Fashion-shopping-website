@@ -65,7 +65,7 @@ window.addEventListener("scroll", () => {
     } else {
       if (
         fadeUp[i].getBoundingClientRect().y - windowHeight   <
-        0.01 * windowHeight
+        0.9 * windowHeight
       ) {
         fadeUp[i].classList.add("fade-up--after");
       } else {
