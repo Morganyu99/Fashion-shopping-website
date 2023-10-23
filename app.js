@@ -8,7 +8,7 @@ document.querySelectorAll(".collapse").forEach((item) => {
 // NavBar
 const nav = document.querySelectorAll(".nav__container")[0];
 const nav_bar = document.querySelectorAll(".collapse")[0];
-
+ let currentScroll = nav.offsetHeight;
 //Hero;
 const highlight = document.querySelectorAll(".highlight");
 const fadeUp = document.querySelectorAll(".fade-up");
@@ -17,7 +17,7 @@ highlight[1].classList.add("highlight--aftanimate");
 fadeUp[0].classList.add("fade-up--after");
 //Scroll Dependent
 window.addEventListener("scroll", () => {
-  let currentScroll = nav.offsetHeight;
+ 
   const windowHeight = window.innerHeight;
   // NavBar
   if (window.scrollY > nav.offsetHeight) {
